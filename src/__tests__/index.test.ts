@@ -1,4 +1,4 @@
-import { parse } from "../";
+import { parse } from "..";
 
 describe("test parser", () => {
 	test("should parse string", () => {
