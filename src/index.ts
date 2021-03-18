@@ -160,7 +160,11 @@ export const parse = (name: string) => {
 					torrent[key] = value;
 			}
 
-			value.map((q: string) => (name = flushName(name, q)));
+			if (option.choose && option.choose === ChooseType.LAST) {
+				name = flushName(name, value[value.length - 1]);
+			} else {
+				value.map((q: string) => (name = flushName(name, q)));
+			}
 		}
 
 		// after we have extracted the year, extract the movie title right away
