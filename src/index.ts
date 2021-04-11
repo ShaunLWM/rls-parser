@@ -1,28 +1,5 @@
 import trim from "lodash.trim";
-
-enum ChooseType {
-	FIRST,
-	LAST,
-}
-
-interface PatternConfig {
-	regex: RegExp;
-	type: string;
-	choose?: ChooseType;
-}
-interface IPatterns {
-	year: PatternConfig;
-	resolution: PatternConfig;
-	quality: PatternConfig;
-	codec: PatternConfig;
-	audio: PatternConfig;
-	// group: PatternConfig;
-	repack: PatternConfig;
-	complete: PatternConfig;
-	size: PatternConfig;
-	internal: PatternConfig;
-	remux: PatternConfig;
-}
+import { ChooseType, IPatterns } from "./typings";
 
 const patterns: IPatterns = {
 	year: {
